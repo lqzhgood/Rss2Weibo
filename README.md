@@ -1,6 +1,6 @@
 # Rss2Weibo
-将 rss 流同步到 微博. 如twitter facebook 等 RSS 流同步到微博
-[Twitter to Rss](https://github.com/snarfed/twitter-atom)
+将 rss 流同步到 微博. 如twitter facebook 等 RSS 流同步到微博 <br/>
+[Twitter to Rss](https://github.com/snarfed/twitter-atom)<br/>
 [Facebook to Rss](https://github.com/snarfed/facebook-atom)
 ## 安装 Installation
 
