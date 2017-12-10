@@ -23,13 +23,13 @@ npm install
 ### config.js
 config  多个配置组成的数组
 
-| key    | type   | info|
-|--------|-----  |------|
-|NAME    |String | 配置的名称，仅用于标识及日志|
-|WB_AT   |String | Usage \*1 获取的 微博Access_Token|
-|TW_TAG  |Array  | 触发同步的关键词，若数组为空则同步所有到微博，允许多个关键词|
-|TW_RSS_URL|String | 监控的 RSS 地址|
-|DOMAIN  |String | Usage \*2 填写的【安全域名】 每条微博后会追加这个域名地址，需要 *http/https* 开头。若为空，则追加 RSS 条目地址|
+| key    | type   |
+|--------|-----  |
+|NAME    |String | 配置的名称，仅用于标识及日志
+|WB_AT   |String | Usage \*1 获取的 微博Access_Token
+|TW_TAG  |Array  | 触发同步的关键词，若数组为空则同步所有到微博，允许多个关键词
+|TW_RSS_URL|String | 监控的 RSS 地址
+|DOMAIN  |String | Usage \*2 填写的【安全域名】 每条微博后会追加这个域名地址，需要 *http/https* 开头。若为空，则追加 RSS 条目地址
 
 #### config.js Examples
 ``` javascript
@@ -62,3 +62,6 @@ config  多个配置组成的数组
  如果你完全不明白我上面写的什么，【应用信息】中的 【安全域名】 填 www.baidu.com，config[DOMAIN]填http://www.baidu.com
 
 ```
+- rss轮询时间为上一次循环完成的1分钟后
+- 每条微博的发送间隔时间 3s ，防止发送过快被微博ban
+- 为了保证时间线的正确性，从最老的不重复项开始发，如果中途出现错误，没有发送成功，则后续不会发送，到下一个循环重试。
