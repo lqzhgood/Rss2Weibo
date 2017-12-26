@@ -23,8 +23,8 @@ npm install
 ### config.js
 config  多个配置组成的数组
 
-| key    | type   |
-|--------|-----  |
+| key    | type   | explain 
+|--------|-----  | -------
 |NAME    |String | 配置的名称，仅用于标识及日志
 |WB_AT   |String | Usage \*1 获取的 微博Access_Token
 |TW_TAG  |Array  | 触发同步的关键词，若数组为空则同步所有到微博，允许多个关键词
